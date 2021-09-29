@@ -1,6 +1,6 @@
 <p align="center">
-    <a href="https://iread.ga">
-        <img src="https://github.com/ashutoshkrris/iRead/blob/main/logo.png" width="20%">
+    <a href="https://ashutoshkrris.github.io/Random-APIs/">
+        <img src="https://raw.githubusercontent.com/ashutoshkrris/Random-APIs/main/logo.png" width="20%">
     </a>
 </p>
 
