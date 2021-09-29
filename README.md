@@ -24,13 +24,14 @@
 <a href="https://github.com/ashutoshkrris/Random-APIs/pulls?q=is%3Apr+is%3Aclosed"><img src="https://img.shields.io/github/issues-pr-closed-raw/ashutoshkrris/Random-APIs?color=brightgreen"></a> 
 </div>
 
-This page is for anyone around the globe who wants to start their open-source journey with Hacktoberfest. All you need to do is to call any [Public APIs](https://github.com/public-apis/public-apis) and show us its response in your react component. It could be quotes, cat images, bitcoin - anything. Design it the way you want! Complete your Hacktoberfest challenge this year.
+This repository is for anyone around the globe who wants to start their open-source journey with Hacktoberfest. All you need to do is to call any [Public APIs](https://github.com/public-apis/public-apis) and show us its response on the main page using Javascript Fetch API. It could be quotes, cat images, bitcoin - anything. Design it the way you want! Complete your Hacktoberfest challenge this year.
 
 ## Table of content
 - [Hacktoberfest](#hacktoberfest)
 - [Prerequisite](#prerequisite)
     - [Git and Github](#git--github)
     - [What's an API?](#whats-an-api)
+    - [Using Fetch](#javascript-fetch)
     - [Local setup](#local-setup)
 - [How to contribute?](#how-to-contribute)
 - [Contributors](#contributors)
@@ -69,6 +70,12 @@ For this project, you need to pick up any API you like from this list, read abou
 
 [![Learn more](https://img.shields.io/badge/-Learn%20more-orange?style=plastic)](https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/)
 
+
+### Using Fetch
+
+The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.
+
+[![Learn more](https://img.shields.io/badge/-Learn%20more-orange?style=plastic)](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
 ### Local setup
 - Go to the top of this page and click on the "Fork" button. 
