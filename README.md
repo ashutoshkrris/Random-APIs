@@ -1,12 +1,9 @@
 <p align="center">
     <a href="https://ashutoshkrris.github.io/Random-APIs/">
-        <img src="https://raw.githubusercontent.com/ashutoshkrris/Random-APIs/main/logo.png" width="20%">
+        <img src="https://raw.githubusercontent.com/ashutoshkrris/Random-APIs/main/logo.png" >
     </a>
 </p>
 
-<h1 align="center"> 
-    Random APIs
-</h1>
 <div align="center">
 
 <a href="https://github.com/ashutoshkrris/Random-APIs"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103"></a>
