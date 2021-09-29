@@ -82,7 +82,7 @@ The Fetch API provides a JavaScript interface for accessing and manipulating par
 
 ![Fork](https://i.imgur.com/IyoLUXV.png)
 
-This would make a copy of this repository in your account. You will see `<your_username>/just-calling-random-api`.
+This would make a copy of this repository in your account. You will see `<your_username>/Random-APIs`.
 
 
 - Clone the repository 
