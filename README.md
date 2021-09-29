@@ -170,4 +170,6 @@ Wait for it to get approved and merged. Awesome, you have made your first contri
 
 ### Contributors
 
-Waiting for you! 
+<a href="https://github.com/ashutoshkrris/Random-APIs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ashutoshkrris/Random-APIs" />
+</a>
