@@ -31,7 +31,7 @@ This repository is for anyone around the globe who wants to start their open-sou
 - [Prerequisite](#prerequisite)
     - [Git and Github](#git--github)
     - [What's an API?](#whats-an-api)
-    - [Using Fetch](#javascript-fetch)
+    - [Using Fetch](#using-fetch)
     - [Local setup](#local-setup)
 - [How to contribute?](#how-to-contribute)
 - [Contributors](#contributors)
