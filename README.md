@@ -108,7 +108,7 @@ This would make a copy of this repository in your account. You will see `<your_u
 - Think of some creative use-case of this API, something you would like everybody to see.
 - Now, Open VS code or any text editor.
 - Go to `main.js` file.
-- Create a new fetch api call as:
+- Create a new fetch api call after the last one, as:
 ```
 fetch("https://api.adviceslip.com/advice", {
   method: "GET",
