@@ -1,3 +1,9 @@
+<p align="center">
+    <a href="https://iread.ga">
+        <img src="https://github.com/ashutoshkrris/iRead/blob/main/logo.png" width="20%">
+    </a>
+</p>
+
 <h1 align="center"> 
     Random APIs
 </h1>
@@ -44,7 +50,7 @@ This page is for anyone around the globe who wants to start their open-source jo
 ## Prerequisite
 
 ### Git & Github
-Here, we have mentioned the instructions to set up git. If you don't already know what Git is, check out this blog by [FreeCodeCamp](https://www.freecodecamp.org/news/what-is-git-and-how-to-use-it-c341b049ae61/).
+Here, we have mentioned the instructions to set up git. If you don't already know what Git is, check out this blog series on [iRead](https://iread.ga/series/1/git-and-github).
 
 - Login / Sign-up to [Github](https://github.com/login).
 - Download and install [Git](https://git-scm.com/downloads).
@@ -58,7 +64,7 @@ Here, we have mentioned the instructions to set up git. If you don't already kno
 ### What's an API?
 API stands for Application Programming Interface. Imagine what happens at a restaurant :fork_and_knife: - You order your favorite food :pizza: ( Request ), the waiter serves your order when it's ready (API Response). You are not aware of how the food is prepared. Similarly, you request data from an API, and the API returns it to you. You need not be aware of what's happening behind the scenes. Now, anybody who knows where the restaurant is, and how to communicate with the waiter can place an order. Similarly, anyone can consume an API even computer programs :robot:. 
 
-Whenever you visit [Random APIs](https://ashutoshkrris.github.io/random-apis) you would see a new quote, I could have manually created a list of 1000 quotes and picked up anyone at random but instead, I can just consume [`Advice Slip`](https://api.adviceslip.com/) API which saves me all the trouble of manually creating the list and offers way more quotes that I could have added. 
+Whenever you visit [Random APIs](https://ashutoshkrris.github.io/Random-APIs/) you would see a new quote, I could have manually created a list of 1000 quotes and picked up anyone at random but instead, I can just consume [`Advice Slip`](https://api.adviceslip.com/) API which saves me all the trouble of manually creating the list and offers way more quotes that I could have added. 
 
 There are amazing people out there, who have created a large number of awesome APIs - random Cat pictures :cat2: , random dogs pictures :dog:, breaking bad quotes, harry potter quotes, bitcoin prices :moneybag: , NASA space images, etc. You can find all of these and many more at [Public APIs repository](https://github.com/public-apis/public-apis).
 
