@@ -121,3 +121,39 @@ fetch("http://api.icndb.com/jokes/random", {
         `;
     responsesBody.innerHTML += response;
   });
+
+  fetch("https://asli-fun-fact-api.herokuapp.com/", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Random Fun Facts</h4>
+                <h5 class="card-text mt-4">
+                  ${data.data.fact}
+                </h5>
+                <br />
+                <a href="https://github.com/surya-doc" class="username"
+                  ><img
+                    src="https://avatars.githubusercontent.com/u/69008196?s=96&v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"
+                  />surya-doc</a
+                >
+                &nbsp;
+                <a
+                  href="https://asli-fun-fact-api.herokuapp.com/"
+                  class="btn btn-outline-dark btn-sm"
+                  ><i class="fa fa-link" aria-hidden="true"></i> Fun Fact</a
+                >
+              </div>
+            </div>
+          </div>
+        `;
+    responsesBody.innerHTML += response;
+  });
