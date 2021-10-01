@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://ashutoshkrris.github.io/Random-APIs/">
-        <img src="https://raw.githubusercontent.com/ashutoshkrris/Random-APIs/main/logo.png" >
+        <img src="https://raw.githubusercontent.com/ashutoshkrris/Random-APIs/main/static/images/logo.png" >
     </a>
 </p>
 
