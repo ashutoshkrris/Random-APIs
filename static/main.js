@@ -233,12 +233,12 @@ fetch("https://random.dog/woof.json", {
     responsesBody.innerHTML += response;
   });
 
-  fetch("https://randomfox.ca/floof/", {
-    method: "GET",
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      let response = `
+fetch("https://randomfox.ca/floof/", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
           <div class="col-lg-12 mb-4">
               <div class="card">
                 <div class="card-body">
@@ -266,6 +266,43 @@ fetch("https://random.dog/woof.json", {
               </div>
             </div>
           `;
-      responsesBody.innerHTML += response;
-    });
-  
+    responsesBody.innerHTML += response;
+  });
+
+
+fetch("https://forza-api.tk/", {
+  method: "GET",
+
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Random Car</h4>
+                <h5 class="card-text mt-4">
+                  <img src=${data.image} alt="Random Car" class="card-img-top"/>
+                </h5>
+                <br />
+                <a href="https://github.com/euhidaman" class="username"
+                  ><img
+                    src="https://avatars.githubusercontent.com/u/65843257?v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"
+                  />euhidaman</a
+                >
+                &nbsp;
+                <a
+                  href="https://docs.forza-api.tk/"
+                  class="btn btn-outline-dark btn-sm"
+                  ><i class="fa fa-link" aria-hidden="true"></i> Random Car</a
+                >
+              </div>
+            </div>
+          </div>
+        `;
+    responsesBody.innerHTML += response;
+  });
