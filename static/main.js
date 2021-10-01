@@ -306,3 +306,42 @@ fetch("https://forza-api.tk/", {
         `;
     responsesBody.innerHTML += response;
   });
+
+fetch("https://api.waifu.pics/sfw/happy", {
+    method: "GET",
+  
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      let response = `
+          <div class="col-lg-12 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Anime Image API</h4>
+                  <h5 class="card-text mt-4">
+                    <img src=${data.url} alt="happy anime" class="card-img-top"/>
+                  </h5>
+                  <br />
+                  <a href="https://github.com/yash2002109" class="username"
+                    ><img
+                      src="https://avatars.githubusercontent.com/u/77677278?v=4"
+                      alt="DP"
+                      class="rounded-circle img-fluid mr-2"
+                      width="40"
+                      height="40"
+                    />yash2002109</a
+                  >
+                  &nbsp;
+                  <a
+                    href="https://waifu.pics/docs"
+                    class="btn btn-outline-dark btn-sm"
+                    ><i class="fa fa-link" aria-hidden="true"></i>Waifu Pics</a
+                  >
+                </div>
+              </div>
+            </div>
+          `;
+      responsesBody.innerHTML += response;
+    });
+  
