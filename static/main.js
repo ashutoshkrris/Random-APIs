@@ -411,3 +411,43 @@ fetch("https://my-bao-server.herokuapp.com/api/breadpuns", {
         `;
     responsesBody.innerHTML += response;
   });
+
+
+fetch("https://api.imgflip.com/get_memes", {
+    method: "GET",
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        // In case if the API Doesn't responds
+        let randomImg = "https://i.imgflip.com/4acd7j.png";
+        let imageList = data.data.memes;
+        const randomIndex = Math.floor(Math.random() * imageList.length)
+        randomImg = imageList[randomIndex].url;
+        let response = `
+            <div class="col-lg-12 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Random Meme Template Generator API (ImgFlip)</h4>
+                        <h5 class="card-text mt-4">
+                            <img src=${randomImg} alt="Random Meme Template" class="card-img-top"/>
+                        </h5>
+                        <br />
+                        <a href="https://github.com/shubhamjha25" class="username">
+                            <img
+                                src="https://avatars.githubusercontent.com/u/63443481?v=4"
+                                alt="DP"
+                                class="rounded-circle img-fluid mr-2"
+                                width="40"
+                                height="40"
+                            />
+                            Shubham Jha
+                        </a>
+                        &nbsp;
+                        <a href="https://imgflip.com/api"
+                            class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>ImgFlip</a>
+                    </div>
+                </div>
+            </div>
+        `;
+    responsesBody.innerHTML += response;
+});
