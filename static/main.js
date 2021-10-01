@@ -122,7 +122,7 @@ fetch("http://api.icndb.com/jokes/random", {
     responsesBody.innerHTML += response;
   });
 
-  fetch("https://asli-fun-fact-api.herokuapp.com/", {
+fetch("https://asli-fun-fact-api.herokuapp.com/", {
   method: "GET",
 })
   .then((res) => res.json())
@@ -158,10 +158,12 @@ fetch("http://api.icndb.com/jokes/random", {
     responsesBody.innerHTML += response;
   });
 
-  
-  fetch(`https://swapi.dev/api/people/${Math.floor(Math.random() * 50)}?format=json`, {
-  method: "GET",
-})
+fetch(
+  `https://swapi.dev/api/people/${Math.floor(Math.random() * 50)}?format=json`,
+  {
+    method: "GET",
+  }
+)
   .then((res) => res.json())
   .then((data) => {
     let response = `
@@ -187,6 +189,42 @@ fetch("http://api.icndb.com/jokes/random", {
                   href="https://swapi.dev/api/people/"
                   class="btn btn-outline-dark btn-sm"
                   ><i class="fa fa-link" aria-hidden="true"></i> Fun Names</a
+                >
+              </div>
+            </div>
+          </div>
+        `;
+    responsesBody.innerHTML += response;
+  });
+
+fetch("https://random.dog/woof.json", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Random Dogs</h4>
+                <h5 class="card-text mt-4">
+                  <img src=${data.url} alt="Random Dog" class="card-img-top"/>
+                </h5>
+                <br />
+                <a href="https://github.com/developer-diganta" class="username"
+                  ><img
+                    src="https://avatars.githubusercontent.com/u/65999534?v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"
+                  />developer-diganta</a
+                >
+                &nbsp;
+                <a
+                  href="https://random.dog/woof.json"
+                  class="btn btn-outline-dark btn-sm"
+                  ><i class="fa fa-link" aria-hidden="true"></i> Random Dogs</a
                 >
               </div>
             </div>
