@@ -157,3 +157,40 @@ fetch("http://api.icndb.com/jokes/random", {
         `;
     responsesBody.innerHTML += response;
   });
+
+  
+  fetch(`https://swapi.dev/api/people/${Math.floor(Math.random() * 50)}?format=json`, {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Random Star Wars Name</h4>
+                <h5 class="card-text mt-4">
+                  ${data.data.name}
+                </h5>
+                <br />
+                <a href="https://github.com/apoorvcodes" class="username"
+                  ><img
+                    src="https://avatars.githubusercontent.com/u/75479355?s=400&u=f11f8a0b39b9c606f3d4313ca3dafd846623e40e&v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"
+                  />Apoorv</a
+                >
+                &nbsp;
+                <a
+                  href="https://swapi.dev/api/people/"
+                  class="btn btn-outline-dark btn-sm"
+                  ><i class="fa fa-link" aria-hidden="true"></i> Fun Names</a
+                >
+              </div>
+            </div>
+          </div>
+        `;
+    responsesBody.innerHTML += response;
+  });

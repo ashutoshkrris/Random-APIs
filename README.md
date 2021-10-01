@@ -159,6 +159,13 @@ fetch("https://api.adviceslip.com/advice", {
     - Finally, replace the **API Documentation URL** and **API Name**
     - ![API Replacements](https://i.imgur.com/L2yjliH.png)
 
+  ### Tailwindcss
+  ```js
+  // Now tailwindcss works with this project
+  npm install / yarn //either use yarn or npm to install dependencies 
+  npm run build / yarn build //build tailwind styles
+  ```
+
 - Go through the documentation of your API. It would contain instructions on its usage. Use those instructions to create a fetch request. Take help from randomQuotes component. This step would be different for all of us. Don't worry, API documentation and code in other components would give you enough clues. Consume the API and display its response in your component.
 - Please do not add any API which requires API Key to access it.
 - Great, if you have done the above part Congratulations! :tada:
