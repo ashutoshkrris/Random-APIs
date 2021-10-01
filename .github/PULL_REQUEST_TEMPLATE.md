@@ -8,7 +8,7 @@ Optional
 <hr>
 Checklist
 
-- [ ] API used in this PR was not used in just-calling-random-api before.
+- [ ] API used in this PR was not used in Random-APIs before.
 - [ ] API used in this PR is Public or I have permission to use it.
 - [ ] My contribution is working.
 - [ ] My changes don't generate any new warnings.
