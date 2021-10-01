@@ -411,3 +411,44 @@ fetch("https://my-bao-server.herokuapp.com/api/breadpuns", {
         `;
     responsesBody.innerHTML += response;
   });
+
+
+fetch("https://dev.to/api/articles?per_page=1&tag=python", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let result = data[0];
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">${result.title}</h4>
+                <h5 class="card-text mt-4">
+                  <img src=${result.social_image} alt="Midnight Mass" class="card-img-top"/>
+                </h5>
+                <h5 class="card-text mt-4">
+                  ${result.description}
+                </h5>
+                <br />
+                <a href="https://github.com/coderaman07" class="username"
+                  ><img
+                    src="https://avatars.githubusercontent.com/u/54279831?s=400&u=66c997b6ce4e780969395dfea320a35d8461a690&v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"
+                  />coderaman07</a
+                >
+                &nbsp;
+                <a
+                  href="https://developers.forem.com/api#operation/getArticles"
+                  class="btn btn-outline-dark btn-sm"
+                  ><i class="fa fa-link mr-2 mr-2" aria-hidden="true"></i>Dev.to API</a
+                >
+              </div>
+            </div>
+          </div>
+        `;
+    responsesBody.innerHTML += response;
+  });
