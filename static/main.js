@@ -172,7 +172,7 @@ fetch(
               <div class="card-body">
                 <h4 class="card-title">Random Star Wars Name</h4>
                 <h5 class="card-text mt-4">
-                  ${data.data.name}
+                  ${data.name}
                 </h5>
                 <br />
                 <a href="https://github.com/apoorvcodes" class="username"
