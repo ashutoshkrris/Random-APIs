@@ -21,7 +21,7 @@ fetch("https://api.adviceslip.com/advice", {
                     height="40"/>ashutoshkrris</a>
                 &nbsp;
                 <a href="https://api.adviceslip.com/"
-                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link" aria-hidden="true"></i> Advice Slip</a>
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i> Advice Slip</a>
               </div>
             </div>
           </div>
@@ -50,7 +50,7 @@ fetch("https://animechan.vercel.app/api/random", {
                     height="40"/>vish-han</a>
                 &nbsp;
                 <a href="https://animechan.vercel.app/"
-                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link" aria-hidden="true"></i>Anime Quote</a>
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>Anime Quote</a>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ fetch("https://foodish-api.herokuapp.com/api/", {
                     height="40"/>ashish patwal</a>
                 &nbsp;
                 <a href="https://foodish-api.herokuapp.com/"
-                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link" aria-hidden="true"></i>Foodish API</a>
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>Foodish API</a>
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@ fetch("https://api.icndb.com/jokes/random", {
                     height="40"/>rahulshawdev</a>
                 &nbsp;
                 <a href="https://www.icndb.com/api/"
-                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link" aria-hidden="true"></i> Chuck Norris Joke</a>
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i> Chuck Norris Joke</a>
               </div>
             </div>
           </div>
@@ -149,7 +149,7 @@ fetch("https://asli-fun-fact-api.herokuapp.com/", {
                 <a
                   href="https://asli-fun-fact-api.herokuapp.com/"
                   class="btn btn-outline-dark btn-sm"
-                  ><i class="fa fa-link" aria-hidden="true"></i> Fun Fact</a
+                  ><i class="fa fa-link mr-2" aria-hidden="true"></i> Fun Fact</a
                 >
               </div>
             </div>
@@ -162,7 +162,7 @@ fetch(
   `https://swapi.dev/api/people/${Math.floor(Math.random() * 50)}?format=json`,
   {
     method: "GET",
-  }
+  },
 )
   .then((res) => res.json())
   .then((data) => {
@@ -188,7 +188,7 @@ fetch(
                 <a
                   href="https://swapi.dev/api/people/"
                   class="btn btn-outline-dark btn-sm"
-                  ><i class="fa fa-link" aria-hidden="true"></i> Fun Names</a
+                  ><i class="fa fa-link mr-2" aria-hidden="true"></i> Fun Names</a
                 >
               </div>
             </div>
@@ -224,7 +224,7 @@ fetch("https://random.dog/woof.json", {
                 <a
                   href="https://random.dog/woof.json"
                   class="btn btn-outline-dark btn-sm"
-                  ><i class="fa fa-link" aria-hidden="true"></i> Random Dogs</a
+                  ><i class="fa fa-link mr-2" aria-hidden="true"></i> Random Dogs</a
                 >
               </div>
             </div>
@@ -260,7 +260,7 @@ fetch("https://randomfox.ca/floof/", {
                   <a
                     href="https://randomfox.ca/floof/"
                     class="btn btn-outline-dark btn-sm"
-                    ><i class="fa fa-link" aria-hidden="true"></i> Random Fox</a
+                    ><i class="fa fa-link mr-2" aria-hidden="true"></i> Random Fox</a
                   >
                 </div>
               </div>
@@ -269,10 +269,8 @@ fetch("https://randomfox.ca/floof/", {
     responsesBody.innerHTML += response;
   });
 
-
 fetch("https://forza-api.tk/", {
   method: "GET",
-
 })
   .then((res) => res.json())
   .then((data) => {
@@ -298,11 +296,54 @@ fetch("https://forza-api.tk/", {
                 <a
                   href="https://docs.forza-api.tk/"
                   class="btn btn-outline-dark btn-sm"
-                  ><i class="fa fa-link" aria-hidden="true"></i> Random Car</a
+                  ><i class="fa fa-link mr-2" aria-hidden="true"></i> Random Car</a
                 >
               </div>
             </div>
           </div>
         `;
     responsesBody.innerHTML += response;
+  });
+
+fetch("https://api.tvmaze.com/search/shows?q=Midnight%20Mass", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    const result = data[0].show;
+
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">${result.name}</h4>
+                <h5 class="card-text mt-4">
+                  <img src=${result.image.original} alt="Midnight Mass" class="card-img-top"/>
+                </h5>
+                <h5 class="card-text mt-4">
+                  ${result.summary}
+                </h5>
+                <br />
+                <a href="https://github.com/rahulshawdev" class="username"
+                  ><img
+                    src="https://avatars.githubusercontent.com/u/82671048?s=400&u=7be9f8ac1458b191b6e46c66990cd8c82ec8915b&v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"
+                  />rahulshawdev</a
+                >
+                &nbsp;
+                <a
+                  href="https://www.tvmaze.com/api"
+                  class="btn btn-outline-dark btn-sm"
+                  ><i class="fa fa-link mr-2 mr-2" aria-hidden="true"></i> TV Maze API</a
+                >
+              </div>
+            </div>
+          </div>
+        `;
+    responsesBody.innerHTML += response;
+
+    console.log(result);
   });
