@@ -374,7 +374,7 @@ fetch("https://api.waifu.pics/sfw/happy", {
                   <a
                     href="https://waifu.pics/docs"
                     class="btn btn-outline-dark btn-sm"
-                    ><i class="fa fa-link" aria-hidden="true"></i>Waifu Pics</a
+                    ><i class="fa fa-link mr-2" aria-hidden="true"></i>Waifu Pics</a
                   >
                 </div>
               </div>
