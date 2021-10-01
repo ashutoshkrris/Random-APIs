@@ -382,3 +382,32 @@ fetch("https://api.waifu.pics/sfw/happy", {
           `;
     responsesBody.innerHTML += response;
   });
+
+fetch("https://my-bao-server.herokuapp.com/api/breadpuns", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Bread Puns API</h4>
+                <h5 class="card-text mt-4">${data}</h5>
+                <br />
+                <a href="https://github.com/itzmeowww" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/28824919?s=96&v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>itzmeowww</a>
+                &nbsp;
+                <a href="https://my-bao-server.herokuapp.com/"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>Bread Puns</a>
+              </div>
+            </div>
+          </div>
+        `;
+    responsesBody.innerHTML += response;
+  });
