@@ -93,7 +93,7 @@ fetch("https://foodish-api.herokuapp.com/api/", {
     responsesBody.innerHTML += response;
   });
 
-fetch("http://api.icndb.com/jokes/random", {
+fetch("https://api.icndb.com/jokes/random", {
   method: "GET",
 })
   .then((res) => res.json())
@@ -113,7 +113,7 @@ fetch("http://api.icndb.com/jokes/random", {
                     width="40"
                     height="40"/>rahulshawdev</a>
                 &nbsp;
-                <a href="http://www.icndb.com/api/"
+                <a href="https://www.icndb.com/api/"
                   class="btn btn-outline-dark btn-sm"><i class="fa fa-link" aria-hidden="true"></i> Chuck Norris Joke</a>
               </div>
             </div>
