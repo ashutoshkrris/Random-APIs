@@ -232,3 +232,40 @@ fetch("https://random.dog/woof.json", {
         `;
     responsesBody.innerHTML += response;
   });
+
+  fetch("https://randomfox.ca/floof/", {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      let response = `
+          <div class="col-lg-12 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Random Fox Image</h4>
+                  <h5 class="card-text mt-4">
+                    <img src=${data.image} alt="Random Fox" class="card-img-top"/>
+                  </h5>
+                  <br />
+                  <a href="https://github.com/vae97" class="username"
+                    ><img
+                      src="https://avatars.githubusercontent.com/u/62983845?v=4"
+                      alt="DP"
+                      class="rounded-circle img-fluid mr-2"
+                      width="40"
+                      height="40"
+                    />R.M.V.Akash Ekanayaka</a
+                  >
+                  &nbsp;
+                  <a
+                    href="https://randomfox.ca/floof/"
+                    class="btn btn-outline-dark btn-sm"
+                    ><i class="fa fa-link" aria-hidden="true"></i> Random Fox</a
+                  >
+                </div>
+              </div>
+            </div>
+          `;
+      responsesBody.innerHTML += response;
+    });
+  
