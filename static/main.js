@@ -675,3 +675,32 @@ fetch("https://game-of-thrones-quotes.herokuapp.com/v1/random", {
         `;
         responsesBody.innerHTML += response;
     });
+        
+fetch("https://passwordinator.herokuapp.com/generate", {
+      method: "GET",
+  })
+      .then((res) => res.json())
+      .then((data) => {
+          let response = `
+          <div class="col-lg-12 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Password Generator</h4>
+                  <h5 class="card-text mt-4">${data.data}</h5>
+                  <br />
+                  <a href="https://github.com/smotastic" class="username">
+                    <img
+                      src="https://avatars.githubusercontent.com/smotastic"
+                      alt="DP"
+                      class="rounded-circle img-fluid mr-2"
+                      width="40"
+                      height="40"/>smotastic</a>
+                  &nbsp;
+                  <a href="https://github.com/fawazsullia/password-generator/"
+                    class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>Password Generator</a>
+                </div>
+              </div>
+            </div>
+          `;
+          responsesBody.innerHTML += response;
+      });
