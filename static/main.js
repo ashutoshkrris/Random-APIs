@@ -1,34 +1,5 @@
 const responsesBody = document.querySelector("#responses");
 
-fetch("https://api.kanye.rest", {
-	method: "GET",
-})
-	.then((res) => res.json())
-	.then((data) => {
-		let response = `
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Random Kanye West Quotes</h4>
-                <h5 class="card-text mt-4">${data.quote}</h5>
-                <br />
-                <a href="https://github.com/ANISH0309" class="username">
-                  <img
-                    src="https://avatars.githubusercontent.com/ANISH0309"
-                    alt="DP"
-                    class="rounded-circle img-fluid mr-2"
-                    width="40"
-                    height="40"/>ANISH0309</a>
-                &nbsp;
-                <a href="https://kanye.rest/"
-                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i> Kanye.rest</a>
-              </div>
-            </div>
-          </div>
-        `;
-		responsesBody.innerHTML += response;
-	});
-
 fetch("https://api.adviceslip.com/advice", {
 	method: "GET",
 })
