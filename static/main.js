@@ -1,11 +1,11 @@
 const responsesBody = document.querySelector("#responses");
 
 fetch("https://api.adviceslip.com/advice", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -26,15 +26,15 @@ fetch("https://api.adviceslip.com/advice", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://animechan.vercel.app/api/random", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -55,20 +55,20 @@ fetch("https://animechan.vercel.app/api/random", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://foodish-api.herokuapp.com/api/", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        function basename(path) {
-            let base = path.split("/").reverse()[0];
-            return base.split(".")[0];
-        }
+  .then((res) => res.json())
+  .then((data) => {
+    function basename(path) {
+      let base = path.split("/").reverse()[0];
+      return base.split(".")[0];
+    }
 
-        let response = `
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
 	          <img src="${data.image}" class="card-img-top" alt="Food Dish">
@@ -90,15 +90,15 @@ fetch("https://foodish-api.herokuapp.com/api/", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://api.icndb.com/jokes/random", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -119,15 +119,15 @@ fetch("https://api.icndb.com/jokes/random", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://asli-fun-fact-api.herokuapp.com/", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -155,20 +155,18 @@ fetch("https://asli-fun-fact-api.herokuapp.com/", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch(
-    `https://swapi.dev/api/people/${Math.floor(
-        Math.random() * 50
-    )}?format=json`,
-    {
-        method: "GET",
-    }
+  `https://swapi.dev/api/people/${Math.floor(Math.random() * 50)}?format=json`,
+  {
+    method: "GET",
+  }
 )
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -196,15 +194,15 @@ fetch(
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://random.dog/woof.json", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -232,15 +230,15 @@ fetch("https://random.dog/woof.json", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://randomfox.ca/floof/", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
           <div class="col-lg-12 mb-4">
               <div class="card">
                 <div class="card-body">
@@ -268,15 +266,15 @@ fetch("https://randomfox.ca/floof/", {
               </div>
             </div>
           `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://forza-api.tk/", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -304,17 +302,17 @@ fetch("https://forza-api.tk/", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://api.tvmaze.com/search/shows?q=Midnight%20Mass", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        const result = data[0].show;
+  .then((res) => res.json())
+  .then((data) => {
+    const result = data[0].show;
 
-        let response = `
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -345,15 +343,15 @@ fetch("https://api.tvmaze.com/search/shows?q=Midnight%20Mass", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://api.waifu.pics/sfw/happy", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
           <div class="col-lg-12 mb-4">
               <div class="card">
                 <div class="card-body">
@@ -381,15 +379,15 @@ fetch("https://api.waifu.pics/sfw/happy", {
               </div>
             </div>
           `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://my-bao-server.herokuapp.com/api/breadpuns", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -410,16 +408,16 @@ fetch("https://my-bao-server.herokuapp.com/api/breadpuns", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://dev.to/api/articles?per_page=1&tag=python", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let result = data[0];
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let result = data[0];
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -450,19 +448,19 @@ fetch("https://dev.to/api/articles?per_page=1&tag=python", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 fetch("https://api.imgflip.com/get_memes", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        // In case if the API Doesn't responds
-        let randomImg = "https://i.imgflip.com/4acd7j.png";
-        let imageList = data.data.memes;
-        const randomIndex = Math.floor(Math.random() * imageList.length);
-        randomImg = imageList[randomIndex].url;
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    // In case if the API Doesn't responds
+    let randomImg = "https://i.imgflip.com/4acd7j.png";
+    let imageList = data.data.memes;
+    const randomIndex = Math.floor(Math.random() * imageList.length);
+    randomImg = imageList[randomIndex].url;
+    let response = `
             <div class="col-lg-12 mb-4">
                 <div class="card">
                     <div class="card-body">
@@ -488,14 +486,14 @@ fetch("https://api.imgflip.com/get_memes", {
                 </div>
             </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 fetch("https://aws.random.cat/meow", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -518,18 +516,18 @@ fetch("https://aws.random.cat/meow", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://breakingbadapi.com/api/characters", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        const result = data[0];
+  .then((res) => res.json())
+  .then((data) => {
+    const result = data[0];
 
-        console.log(result);
-        let response = `
+    console.log(result);
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -552,17 +550,17 @@ fetch("https://breakingbadapi.com/api/characters", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://api.dictionaryapi.dev/api/v2/entries/en/peculiar", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        const result = data[0];
+  .then((res) => res.json())
+  .then((data) => {
+    const result = data[0];
 
-        let response = `
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -585,14 +583,14 @@ fetch("https://api.dictionaryapi.dev/api/v2/entries/en/peculiar", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 fetch("https://nekos.best/api/v1/nekos", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -615,15 +613,15 @@ fetch("https://nekos.best/api/v1/nekos", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://api.kanye.rest", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -644,15 +642,15 @@ fetch("https://api.kanye.rest", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
 
 fetch("https://game-of-thrones-quotes.herokuapp.com/v1/random", {
-    method: "GET",
+  method: "GET",
 })
-    .then((res) => res.json())
-    .then((data) => {
-        let response = `
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
@@ -673,5 +671,85 @@ fetch("https://game-of-thrones-quotes.herokuapp.com/v1/random", {
             </div>
           </div>
         `;
-        responsesBody.innerHTML += response;
-    });
+    responsesBody.innerHTML += response;
+  });
+// TheCocktailDB API -  returns a random cocktail recipe 🍹
+fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let drinkObj = data.drinks[0];
+    //returns all ingredients used in recipe
+    let ingredients = () => {
+      const {
+        strIngredient1,
+        strIngredient2,
+        strIngredient3,
+        strIngredient4,
+        strIngredient5,
+        strIngredient6,
+        strIngredient7,
+        strIngredient8,
+        strIngredient9,
+        strIngredient10,
+        strIngredient11,
+        strIngredient12,
+        strIngredient13,
+        strIngredient14,
+        strIngredient15,
+      } = drinkObj;
+      return [
+        strIngredient1,
+        strIngredient2,
+        strIngredient3,
+        strIngredient4,
+        strIngredient5,
+        strIngredient6,
+        strIngredient7,
+        strIngredient8,
+        strIngredient9,
+        strIngredient10,
+        strIngredient11,
+        strIngredient12,
+        strIngredient13,
+        strIngredient14,
+        strIngredient15,
+      ];
+    };
+    //filters out all NULL ingredients and returns an array of <li> elements
+    const filteredIngredients = ingredients()
+      .filter((ingredient) => ingredient)
+      .map((ing) => `<li>${ing}</li>`);
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Random Cocktail Recipe</h4>
+                <h5 class="card-text mt-4">${drinkObj.strDrink}</h5>
+                <img src="${
+                  drinkObj.strDrinkThumb
+                }" alt="random cocktail" class="card-img-top"/>
+                <h6 class="font-bold">Ingredients</h6>
+                <ul>
+                  ${filteredIngredients.join("")} 
+                </ul>
+                <h6 class="font-bold">Instructions</h6>
+                <p>${drinkObj.strInstructions}</p>
+                <br />
+                <a href="https://github.com/Kenny-Vu" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/Kenny-Vu"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>Kenny Vu</a>
+                &nbsp;
+                <a href="https://www.thecocktaildb.com/api.php"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>TheCocktailDB</a>
+              </div>
+            </div>
+          </div>
+        `;
+    responsesBody.innerHTML += response;
+  });
