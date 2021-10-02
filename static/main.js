@@ -1,7 +1,7 @@
-const responsesBody = document.querySelector("#responses");
+const responsesBody = document.querySelector('#responses');
 
-fetch("https://api.adviceslip.com/advice", {
-  method: "GET",
+fetch('https://api.adviceslip.com/advice', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
@@ -29,8 +29,8 @@ fetch("https://api.adviceslip.com/advice", {
     responsesBody.innerHTML += response;
   });
 
-fetch("https://animechan.vercel.app/api/random", {
-  method: "GET",
+fetch('https://animechan.vercel.app/api/random', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
@@ -58,14 +58,14 @@ fetch("https://animechan.vercel.app/api/random", {
     responsesBody.innerHTML += response;
   });
 
-fetch("https://foodish-api.herokuapp.com/api/", {
-  method: "GET",
+fetch('https://foodish-api.herokuapp.com/api/', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
     function basename(path) {
-      let base = path.split("/").reverse()[0];
-      return base.split(".")[0];
+      let base = path.split('/').reverse()[0];
+      return base.split('.')[0];
     }
 
     let response = `
@@ -93,8 +93,8 @@ fetch("https://foodish-api.herokuapp.com/api/", {
     responsesBody.innerHTML += response;
   });
 
-fetch("https://api.icndb.com/jokes/random", {
-  method: "GET",
+fetch('https://api.icndb.com/jokes/random', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
@@ -122,8 +122,8 @@ fetch("https://api.icndb.com/jokes/random", {
     responsesBody.innerHTML += response;
   });
 
-fetch("https://asli-fun-fact-api.herokuapp.com/", {
-  method: "GET",
+fetch('https://asli-fun-fact-api.herokuapp.com/', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
@@ -161,8 +161,8 @@ fetch("https://asli-fun-fact-api.herokuapp.com/", {
 fetch(
   `https://swapi.dev/api/people/${Math.floor(Math.random() * 50)}?format=json`,
   {
-    method: "GET",
-  }
+    method: 'GET',
+  },
 )
   .then((res) => res.json())
   .then((data) => {
@@ -197,8 +197,8 @@ fetch(
     responsesBody.innerHTML += response;
   });
 
-fetch("https://random.dog/woof.json", {
-  method: "GET",
+fetch('https://random.dog/woof.json', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
@@ -233,8 +233,8 @@ fetch("https://random.dog/woof.json", {
     responsesBody.innerHTML += response;
   });
 
-fetch("https://randomfox.ca/floof/", {
-  method: "GET",
+fetch('https://randomfox.ca/floof/', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
@@ -269,8 +269,8 @@ fetch("https://randomfox.ca/floof/", {
     responsesBody.innerHTML += response;
   });
 
-fetch("https://forza-api.tk/", {
-  method: "GET",
+fetch('https://forza-api.tk/', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
@@ -305,8 +305,8 @@ fetch("https://forza-api.tk/", {
     responsesBody.innerHTML += response;
   });
 
-fetch("https://api.tvmaze.com/search/shows?q=Midnight%20Mass", {
-  method: "GET",
+fetch('https://api.tvmaze.com/search/shows?q=Midnight%20Mass', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
@@ -346,12 +346,11 @@ fetch("https://api.tvmaze.com/search/shows?q=Midnight%20Mass", {
     responsesBody.innerHTML += response;
   });
 
-fetch("https://api.waifu.pics/sfw/happy", {
-  method: "GET",
+fetch('https://api.waifu.pics/sfw/happy', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
     let response = `
           <div class="col-lg-12 mb-4">
               <div class="card">
@@ -383,8 +382,8 @@ fetch("https://api.waifu.pics/sfw/happy", {
     responsesBody.innerHTML += response;
   });
 
-fetch("https://my-bao-server.herokuapp.com/api/breadpuns", {
-  method: "GET",
+fetch('https://my-bao-server.herokuapp.com/api/breadpuns', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
@@ -412,8 +411,8 @@ fetch("https://my-bao-server.herokuapp.com/api/breadpuns", {
     responsesBody.innerHTML += response;
   });
 
-fetch("https://dev.to/api/articles?per_page=1&tag=python", {
-  method: "GET",
+fetch('https://dev.to/api/articles?per_page=1&tag=python', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
@@ -451,13 +450,13 @@ fetch("https://dev.to/api/articles?per_page=1&tag=python", {
         `;
     responsesBody.innerHTML += response;
   });
-fetch("https://api.imgflip.com/get_memes", {
-  method: "GET",
+fetch('https://api.imgflip.com/get_memes', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
     // In case if the API Doesn't responds
-    let randomImg = "https://i.imgflip.com/4acd7j.png";
+    let randomImg = 'https://i.imgflip.com/4acd7j.png';
     let imageList = data.data.memes;
     const randomIndex = Math.floor(Math.random() * imageList.length);
     randomImg = imageList[randomIndex].url;
@@ -489,8 +488,8 @@ fetch("https://api.imgflip.com/get_memes", {
         `;
     responsesBody.innerHTML += response;
   });
-fetch("https://aws.random.cat/meow", {
-  method: "GET",
+fetch('https://aws.random.cat/meow', {
+  method: 'GET',
 })
   .then((res) => res.json())
   .then((data) => {
@@ -520,3 +519,35 @@ fetch("https://aws.random.cat/meow", {
     responsesBody.innerHTML += response;
   });
 
+fetch('https://api.dictionaryapi.dev/api/v2/entries/en/peculiar', {
+  method: 'GET',
+})
+  .then((res) => res.json())
+  .then((data) => {
+    const result = data[0];
+
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">${result.word}</h4>
+                <h5 class="card-text mt-4">
+                  ${result.origin}
+                </h5>
+                <br />
+                <a href="https://github.com/rahulshawdev" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/82671048?v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>rahulshawdev</a>
+                &nbsp;
+                <a href="https://dictionaryapi.dev/"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>Free Dictionary</a>
+              </div>
+            </div>
+          </div>
+        `;
+    responsesBody.innerHTML += response;
+  });
