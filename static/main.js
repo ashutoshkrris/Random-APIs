@@ -489,3 +489,34 @@ fetch("https://api.imgflip.com/get_memes", {
         `;
     responsesBody.innerHTML += response;
   });
+fetch("https://aws.random.cat/meow", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">RandomCat API</h4>
+                <h5 class="card-text mt-4">
+                  <img src=${data.file} alt="Random cat gif/image" class="card-img-top"/>
+                </h5>
+                <br />
+                <a href="https://github.com/camperjett" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/84286404?v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>camperjett</a>
+                &nbsp;
+                <a href="https://aws.random.cat/meow"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>RandomCat</a>
+              </div>
+            </div>
+          </div>
+        `;
+    responsesBody.innerHTML += response;
+  });
+
