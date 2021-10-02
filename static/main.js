@@ -674,7 +674,6 @@ fetch("https://game-of-thrones-quotes.herokuapp.com/v1/random", {
           </div>
         `;
         responsesBody.innerHTML += response;
-   
 	
 fetch("https://programming-quotes-api.herokuapp.com/quotes/random", {
     method: "GET",
