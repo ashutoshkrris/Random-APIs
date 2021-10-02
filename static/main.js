@@ -675,3 +675,43 @@ fetch("https://game-of-thrones-quotes.herokuapp.com/v1/random", {
         `;
         responsesBody.innerHTML += response;
     });
+
+fetch("https://pokeapi.co/api/v2/pokemon-species?limit=0", {
+  method: "GET",
+})
+    .then((res) => res.json())
+    .then((data) => {
+        fetch(`https://pokeapi.co/api/v2/pokemon/${Math.floor(Math.random() * data.count)}`, {
+            method: "GET",
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                let response = `
+                    <div class="col-lg-12 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">PokéAPI</h4>
+                                <h5 class="card-text">
+                                    <img src=${data.sprites.front_default} alt="${data.name}" class="card-img-top"/>
+                                </h5>
+                                <h5 class="card-text mt-4">
+                                    ${data.name}
+                                </h5>
+                                <br />
+                                <a href="https://github.com/ivanovishado" class="username">
+                                    <img
+                                    src="https://avatars.githubusercontent.com/ivanovishado"
+                                    alt="DP"
+                                    class="rounded-circle img-fluid mr-2"
+                                    width="40"
+                                    height="40"/>ivanovishado</a>
+                                &nbsp;
+                                <a href="https://pokeapi.co/"
+                                    class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i> PokéAPI</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                responsesBody.innerHTML += response;
+            })
+    });
