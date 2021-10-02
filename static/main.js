@@ -1,5 +1,8 @@
 const responsesBody = document.querySelector("#responses");
 
+const loading =document.getElementById('loader');
+
+loading.style.display="block";
 fetch("https://api.adviceslip.com/advice", {
     method: "GET",
 })
@@ -26,9 +29,11 @@ fetch("https://api.adviceslip.com/advice", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
 
+loading.style.display="block";
 fetch("https://animechan.vercel.app/api/random", {
     method: "GET",
 })
@@ -55,9 +60,10 @@ fetch("https://animechan.vercel.app/api/random", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
-
+loading.style.display="block";
 fetch("https://foodish-api.herokuapp.com/api/", {
     method: "GET",
 })
@@ -90,9 +96,11 @@ fetch("https://foodish-api.herokuapp.com/api/", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
 
+loading.style.display="block";
 fetch("https://api.icndb.com/jokes/random", {
     method: "GET",
 })
@@ -119,9 +127,10 @@ fetch("https://api.icndb.com/jokes/random", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
-
+loading.style.display="block";
 fetch("https://asli-fun-fact-api.herokuapp.com/", {
     method: "GET",
 })
@@ -155,9 +164,11 @@ fetch("https://asli-fun-fact-api.herokuapp.com/", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
 
+loading.style.display="block";
 fetch(
     `https://swapi.dev/api/people/${Math.floor(
         Math.random() * 50
@@ -196,9 +207,10 @@ fetch(
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
-
+loading.style.display="block";
 fetch("https://random.dog/woof.json", {
     method: "GET",
 })
@@ -232,9 +244,10 @@ fetch("https://random.dog/woof.json", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
-
+loading.style.display="block";
 fetch("https://randomfox.ca/floof/", {
     method: "GET",
 })
@@ -268,9 +281,10 @@ fetch("https://randomfox.ca/floof/", {
               </div>
             </div>
           `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
-
+loading.style.display="block";
 fetch("https://forza-api.tk/", {
     method: "GET",
 })
@@ -304,9 +318,10 @@ fetch("https://forza-api.tk/", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
-
+loading.style.display="block";
 fetch("https://api.tvmaze.com/search/shows?q=Midnight%20Mass", {
     method: "GET",
 })
@@ -345,9 +360,10 @@ fetch("https://api.tvmaze.com/search/shows?q=Midnight%20Mass", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
-
+loading.style.display="block";
 fetch("https://api.waifu.pics/sfw/happy", {
     method: "GET",
 })
@@ -381,9 +397,10 @@ fetch("https://api.waifu.pics/sfw/happy", {
               </div>
             </div>
           `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
-
+loading.style.display="block";
 fetch("https://my-bao-server.herokuapp.com/api/breadpuns", {
     method: "GET",
 })
@@ -410,9 +427,10 @@ fetch("https://my-bao-server.herokuapp.com/api/breadpuns", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
-
+loading.style.display="block";
 fetch("https://dev.to/api/articles?per_page=1&tag=python", {
     method: "GET",
 })
@@ -450,8 +468,10 @@ fetch("https://dev.to/api/articles?per_page=1&tag=python", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
+loading.style.display="block";
 fetch("https://api.imgflip.com/get_memes", {
     method: "GET",
 })
@@ -488,8 +508,10 @@ fetch("https://api.imgflip.com/get_memes", {
                 </div>
             </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
+loading.style.display="block";
 fetch("https://aws.random.cat/meow", {
     method: "GET",
 })
@@ -518,9 +540,10 @@ fetch("https://aws.random.cat/meow", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
-
+loading.style.display="block";
 fetch("https://breakingbadapi.com/api/characters", {
     method: "GET",
 })
@@ -552,9 +575,10 @@ fetch("https://breakingbadapi.com/api/characters", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
-
+loading.style.display="block";
 fetch("https://api.dictionaryapi.dev/api/v2/entries/en/peculiar", {
     method: "GET",
 })
@@ -585,8 +609,10 @@ fetch("https://api.dictionaryapi.dev/api/v2/entries/en/peculiar", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
+loading.style.display="block";
 fetch("https://nekos.best/api/v1/nekos", {
     method: "GET",
 })
@@ -615,9 +641,10 @@ fetch("https://nekos.best/api/v1/nekos", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
-
+loading.style.display="block";
 fetch("https://api.kanye.rest", {
     method: "GET",
 })
@@ -644,9 +671,10 @@ fetch("https://api.kanye.rest", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
-
+loading.style.display="block";
 fetch("https://game-of-thrones-quotes.herokuapp.com/v1/random", {
     method: "GET",
 })
@@ -673,5 +701,6 @@ fetch("https://game-of-thrones-quotes.herokuapp.com/v1/random", {
             </div>
           </div>
         `;
+        loading.style.display="none";
         responsesBody.innerHTML += response;
     });
