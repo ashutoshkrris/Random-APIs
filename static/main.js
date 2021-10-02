@@ -674,4 +674,33 @@ fetch("https://game-of-thrones-quotes.herokuapp.com/v1/random", {
           </div>
         `;
         responsesBody.innerHTML += response;
+   
+	
+fetch("https://programming-quotes-api.herokuapp.com/quotes/random", {
+    method: "GET",
+})
+    .then((res) => res.json())
+    .then((data) => {
+        let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Programming Quotes API</h4>
+                <h5 class="card-text mt-4">${data.sentence}</h5>
+                <br />
+                <a href="https://github.com/offbrandballer" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/offbrandballer"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>offbrandballer</a>
+                &nbsp;
+                <a href="https://programming-quotes-api.herokuapp.com"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i> Programming Quotes API</a>
+              </div>
+            </div>
+          </div>
+        `;
+        responsesBody.innerHTML += response;
     });
