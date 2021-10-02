@@ -585,3 +585,33 @@ fetch("https://api.dictionaryapi.dev/api/v2/entries/en/peculiar", {
         `;
     responsesBody.innerHTML += response;
   });
+fetch("https://nekos.best/api/v1/nekos", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">nekos.best API</h4>
+                <h5 class="card-text mt-4">
+                  <img src=${data.url} alt="Random anime girl image" class="card-img-top"/>
+                </h5>
+                <br />
+                <a href="https://github.com/xemeds" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/60552252?v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>xemeds</a>
+                &nbsp;
+                <a href="https://docs.nekos.best/"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>nekos.best API</a>
+              </div>
+            </div>
+          </div>
+        `;
+    responsesBody.innerHTML += response;
+  });
