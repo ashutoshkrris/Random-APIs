@@ -886,6 +886,7 @@ fetch("https://passwordinator.herokuapp.com/generate", {
         responsesBody.innerHTML += response;
     });
 
+loading.style.display = "block";
 fetch("https://coronavirus-19-api.herokuapp.com/all", {
     method: "GET",
 })
@@ -912,5 +913,7 @@ fetch("https://coronavirus-19-api.herokuapp.com/all", {
             </div>
           </div>
         `;
+        console.log(response);
+        loading.style.display = "none";
         responsesBody.innerHTML += response;
     });
