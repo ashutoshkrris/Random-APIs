@@ -916,3 +916,34 @@ fetch("https://coronavirus-19-api.herokuapp.com/all", {
         loading.style.display = "none";
         responsesBody.innerHTML += response;
     });
+
+loading.style.display = "block";
+fetch("https://www.boredapi.com/api/activity", {
+    method: "GET",
+})
+    .then((res) => res.json())
+    .then((data) => {
+        let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Bored API</h4>
+                <h5 class="card-text mt-4">${data.activity}</h5>
+                <br />
+                <a href="https://github.com/xemeds" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/60552252?v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>xemeds</a>
+                &nbsp;
+                <a href="https://www.boredapi.com/"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>Bored API</a>
+              </div>
+            </div>
+          </div>
+        `;
+        loading.style.display = "none";
+        responsesBody.innerHTML += response;
+    });
