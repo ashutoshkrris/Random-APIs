@@ -158,14 +158,9 @@ fetch("https://asli-fun-fact-api.herokuapp.com/", {
         responsesBody.innerHTML += response;
     });
 
-fetch(
-    `https://swapi.dev/api/people/${Math.floor(
-        Math.random() * 50
-    )}?format=json`,
-    {
-        method: "GET",
-    }
-)
+fetch(`https://swapi.dev/api/people/${Math.floor(Math.random() * 50)}?format=json`, {
+    method: "GET",
+})
     .then((res) => res.json())
     .then((data) => {
         let response = `
@@ -673,5 +668,34 @@ fetch("https://game-of-thrones-quotes.herokuapp.com/v1/random", {
             </div>
           </div>
         `;
+        responsesBody.innerHTML += response;
+    });
+
+fetch("https://passwordinator.herokuapp.com/generate", {
+    method: "GET",
+})
+    .then((res) => res.json())
+    .then((data) => {
+        let response = `
+          <div class="col-lg-12 mb-4">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Random Password Generator API</h4>
+                  <h5 class="card-text mt-4">${data.data}</h5>
+                  <br />
+                  <a href="https://github.com/Sampahcokk-dev" class="username">
+                    <img
+                      src="https://avatars.githubusercontent.com/u/69108782?v=4"
+                      alt="DP"
+                      class="rounded-circle img-fluid mr-2"
+                      width="40"
+                      height="40"/>Sampahcokk-dev</a>
+                  &nbsp;
+                  <a href="https://github.com/fawazsullia/password-generator/"
+                    class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i> Random Password Generator</a>
+                </div>
+              </div>
+            </div>
+          `;
         responsesBody.innerHTML += response;
     });
