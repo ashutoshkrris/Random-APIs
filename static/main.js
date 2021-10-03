@@ -944,7 +944,7 @@ fetch("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,r
                     height="40"/>Karan0009</a>
                 &nbsp;
                 <a href="https://v2.jokeapi.dev/"
-                  class="btn btn-outline-dark btn-sm">Jokes API</a>
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i> Jokes API</a>
               </div>
             </div>
           </div>
