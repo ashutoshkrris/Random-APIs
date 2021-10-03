@@ -913,7 +913,6 @@ fetch("https://coronavirus-19-api.herokuapp.com/all", {
             </div>
           </div>
         `;
-        console.log(response);
         loading.style.display = "none";
         responsesBody.innerHTML += response;
     });
