@@ -916,3 +916,44 @@ fetch("https://coronavirus-19-api.herokuapp.com/all", {
         loading.style.display = "none";
         responsesBody.innerHTML += response;
     });
+
+//Duck API   
+
+loading.style.display = "block";
+fetch("https://random-d.uk/api/random", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Random Duck pictures</h4>
+                <h5 class="card-text mt-4">
+                <img
+                src=${data.url}
+                alt="happy duck"
+                class="card-img-top"
+                />
+                </h5>
+                <br />
+                <a href="https://github.com/shubhangi013" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/shubhangi013"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>shubhangi013</a>
+                &nbsp;
+                <a href="https://random-d.uk/api"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>Random-d.uk</a>
+              </div>
+            </div>
+          </div>
+        `;
+    loading.style.display = "none";
+    responsesBody.innerHTML += response;
+  });
+
+
