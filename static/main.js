@@ -1031,3 +1031,41 @@ fetch(
     loading.style.display = "none";
     responsesBody.innerHTML += response;
   });
+
+
+/* Added API for Top 5 MLB pitchers by 2021 ERA
+* Website: https://appac.github.io/mlb-data-api-docs/#top
+*/
+loading.style.display = "block";
+fetch("http://lookup-service-prod.mlb.com/json/named.leader_pitching_repeater.bam?sport_code='mlb'&results=5&game_type='R'&season='2021'&sort_column='era'&leader_pitching_repeater.col_in=name_display_first_last&leader_pitching_repeater.col_in=era", 
+{
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Top 5 MLB Pitchers API</h4>
+                <h5 class="card-text mt-4">
+                1. ${data.row[0].name_display_first_last}: ${data.row[0].era}; 2. ${data.row[1].name_display_first_last}: ${data.row[1].era}; 3. ${data.row[2].name_display_first_last}: ${data.row[2].era}; 4. ${data.row[3].name_display_first_last}: ${data.row[3].era}; ${data.row[5].name_display_first_last}: ${data.row[5].era}
+                </h5>
+                <br />
+                <a href="https://github.com/tsamba120/" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/68271470?v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>tsamba120</a>
+                &nbsp;
+                <a href="https://appac.github.io/mlb-data-api-docs/"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i> MLB Data API</a>
+              </div>
+            </div>
+          </div>
+        `;
+    loading.style.display = "none";
+    responsesBody.innerHTML += response;
+  });
