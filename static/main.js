@@ -3,6 +3,7 @@ const responsesBody = document.querySelector("#responses");
 const loading = document.getElementById("loader");
 
 loading.style.display = "block";
+
 fetch("https://api.adviceslip.com/advice", {
     method: "GET",
 })
@@ -909,6 +910,41 @@ fetch("https://coronavirus-19-api.herokuapp.com/all", {
                 &nbsp;
                 <a href="https://coronavirus-19-api.herokuapp.com/all"
                   class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>Covid Data Global Cases API</a>
+              </div>
+            </div>
+          </div>
+        `;
+        loading.style.display = "none";
+        responsesBody.innerHTML += response;
+    });
+
+/* added jokes api
+ * website: https://v2.jokeapi.dev/
+ * find more public apis at: https://public-apis.io/
+ */
+loading.style.display = "block";
+fetch("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single", {
+    method: "GET",
+})
+    .then((res) => res.json())
+    .then((data) => {
+        let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Jokes API</h4>
+                <h5 class="card-text mt-4">${data.joke}</h5>
+                <br />
+                <a href="https://github.com/Karan0009" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/32881950?v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>Karan0009</a>
+                &nbsp;
+                <a href="https://v2.jokeapi.dev/"
+                  class="btn btn-outline-dark btn-sm">Jokes API</a>
               </div>
             </div>
           </div>
