@@ -916,3 +916,38 @@ fetch("https://coronavirus-19-api.herokuapp.com/all", {
         loading.style.display = "none";
         responsesBody.innerHTML += response;
     });
+loading.style.display = "block";
+fetch("https://api.doge-meme.lol/v1/memes/?skip=0&limit=100", {
+    method: "GET",
+})
+    .then((res) => res.json())
+    .then((data) => {
+		const memeList = data.data
+		const randomIndex = Math.floor((Math.random() * 100) + 1);
+		const meme = memeList[randomIndex].submission_url
+        let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">DogeCoin Meme Api</h4>
+                <h5 class="card-text mt-4">
+					<img src=${meme} alt="Random Dogememe" class="card-img-top"/>
+				</h5>
+                <br />
+                <a href="https://github.com/diganta413" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/69595396?v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>diganta413</a>
+                &nbsp;
+                <a href="https://api.doge-meme.lol/docs"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>DogeCoin Meme Api</a>
+              </div>
+            </div>
+          </div>
+        `;
+        loading.style.display = "none";
+        responsesBody.innerHTML += response;
+    });
