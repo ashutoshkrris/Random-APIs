@@ -1048,9 +1048,11 @@ fetch("http://lookup-service-prod.mlb.com/json/named.leader_pitching_repeater.ba
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title">Top 5 MLB Pitchers API</h4>
-                <h5 class="card-text mt-4">
-                1. ${data.row[0].name_display_first_last}: ${data.row[0].era}; 2. ${data.row[1].name_display_first_last}: ${data.row[1].era}; 3. ${data.row[2].name_display_first_last}: ${data.row[2].era}; 4. ${data.row[3].name_display_first_last}: ${data.row[3].era}; ${data.row[5].name_display_first_last}: ${data.row[5].era}
-                </h5>
+                <h5 class="card-text mt-4">1. ${data.leader_pitching_repeater.leader_pitching_mux.queryResults.row[0].name_display_first_last} - ERA: ${data.leader_pitching_repeater.leader_pitching_mux.queryResults.row[0].era}</h5>
+                <h5 class="card-text mt-4">2. ${data.leader_pitching_repeater.leader_pitching_mux.queryResults.row[1].name_display_first_last} - ERA: ${data.leader_pitching_repeater.leader_pitching_mux.queryResults.row[1].era}</h5>
+                <h5 class="card-text mt-4">3. ${data.leader_pitching_repeater.leader_pitching_mux.queryResults.row[2].name_display_first_last} - ERA: ${data.leader_pitching_repeater.leader_pitching_mux.queryResults.row[2].era}</h5>
+                <h5 class="card-text mt-4">4. ${data.leader_pitching_repeater.leader_pitching_mux.queryResults.row[3].name_display_first_last} - ERA: ${data.leader_pitching_repeater.leader_pitching_mux.queryResults.row[3].era}</h5>
+                <h5 class="card-text mt-4">5. ${data.leader_pitching_repeater.leader_pitching_mux.queryResults.row[4].name_display_first_last} - ERA: ${data.leader_pitching_repeater.leader_pitching_mux.queryResults.row[4].era}</h5>
                 <br />
                 <a href="https://github.com/tsamba120/" class="username">
                   <img
