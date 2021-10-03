@@ -916,10 +916,7 @@ fetch("https://coronavirus-19-api.herokuapp.com/all", {
         loading.style.display = "none";
         responsesBody.innerHTML += response;
     });
-
-
-// taylor swift API
-
+    
 loading.style.display = "block";
 fetch("https://taylorswiftapi.herokuapp.com/get", {
     method: "GET",
