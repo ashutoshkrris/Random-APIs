@@ -917,26 +917,21 @@ fetch("https://coronavirus-19-api.herokuapp.com/all", {
         responsesBody.innerHTML += response;
     });
 
-//Duck API   
+
+// taylor swift API
 
 loading.style.display = "block";
-fetch("https://random-d.uk/api/random", {
-  method: "GET",
+fetch("https://taylorswiftapi.herokuapp.com/get", {
+    method: "GET",
 })
-  .then((res) => res.json())
-  .then((data) => {
-    let response = `
+    .then((res) => res.json())
+    .then((data) => {
+        let response = `
         <div class="col-lg-12 mb-4">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title">Random Duck pictures</h4>
-                <h5 class="card-text mt-4">
-                <img
-                src=${data.url}
-                alt="happy duck"
-                class="card-img-top"
-                />
-                </h5>
+                <h4 class="card-title">Random Taylor SWift Quotes and Lyrics</h4>
+                <h5 class="card-text mt-4">${data.quote}</h5>
                 <br />
                 <a href="https://github.com/shubhangi013" class="username">
                   <img
@@ -946,14 +941,13 @@ fetch("https://random-d.uk/api/random", {
                     width="40"
                     height="40"/>shubhangi013</a>
                 &nbsp;
-                <a href="https://random-d.uk/api"
-                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>Random-d.uk</a>
+                <a href="https://taylorswiftapi.herokuapp.com/"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>TAYLOR SWIFT API</a>
               </div>
             </div>
           </div>
         `;
-    loading.style.display = "none";
-    responsesBody.innerHTML += response;
-  });
-
+        loading.style.display = "none";
+        responsesBody.innerHTML += response;
+    });
 
