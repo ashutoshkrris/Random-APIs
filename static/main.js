@@ -1041,7 +1041,6 @@ fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${Math.f
 })
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
     let image = data.primaryImageSmall;
     let name = data.objectName;
     let date = data.objectDate;
