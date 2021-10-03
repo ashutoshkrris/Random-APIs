@@ -887,7 +887,7 @@ fetch("https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1", {
                     height="40"/>offbrandballer</a>
                 &nbsp;
                 <a href=""
-                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i> Advice Slip</a>
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i> Dog Facts</a>
               </div>
             </div>
           </div>
