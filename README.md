@@ -117,6 +117,7 @@ This would make a copy of this repository in your account. You will see `<your_u
 - Go to `main.js` file.
 - Create a new fetch api call after the last one, as:
 ```
+loading.style.display = "block";
 fetch("https://api.adviceslip.com/advice", {
   method: "GET",
 })
@@ -143,6 +144,7 @@ fetch("https://api.adviceslip.com/advice", {
             </div>
           </div>
         `;
+    loading.style.display = "none";
     responsesBody.innerHTML += response;
   });
 ```
