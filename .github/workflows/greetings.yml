@@ -11,6 +11,9 @@ on:
 jobs:
   greeting:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
     steps:
       - name: Greet New Contributors for Creating New PR/Issues.
         uses: actions/first-interaction@v1
