@@ -702,4 +702,4 @@ fetch("https://programming-quotes-api.herokuapp.com/quotes/random", {
           </div>
         `;
         responsesBody.innerHTML += response;
-    });
+  });
