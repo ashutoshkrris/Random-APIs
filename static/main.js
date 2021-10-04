@@ -283,39 +283,7 @@ fetch("https://randomfox.ca/floof/", {
     loading.style.display = "none";
     responsesBody.innerHTML += response;
   });
-// Random Wallpaper
-loading.style.display = "block";
-fetch("https://source.unsplash.com/random", {
-  method: "GET",
-})
-  .then((res) => res.json())
-  .then((data) => {
-    let response = `
-        <div class="col-lg-12 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Random Wallpaper API</h4>
-                <h5 class="card-text mt-4">
-			<img src=${data.image} alt="Random Wallpaper" class="card-img-top"/>
-		</h5>
-                <br />
-                <a href="https://github.com/Soham2020" class="username">
-                  <img
-                    src="https://avatars.githubusercontent.com/u/66131928?s=400&u=80a9e2f6dc5ede4e833cbdcc1bd731343b4100fd&v=4"
-                    alt="DP"
-                    class="rounded-circle img-fluid mr-2"
-                    width="40"
-                    height="40"/>Soham Das</a>
-                &nbsp;
-                <a href="https://source.unsplash.com/random"
-                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i> Random Wallpaper</a>
-              </div>
-            </div>
-          </div>
-        `;
-    loading.style.display = "none";
-    responsesBody.innerHTML += response;
-  });
+
 
 loading.style.display = "block";
 fetch("https://forza-api.tk/", {
