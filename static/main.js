@@ -1063,3 +1063,53 @@ fetch("https://taylorswiftapi.herokuapp.com/get", {
     loading.style.display = "none";
     responsesBody.innerHTML += response;
   });
+// Added The Metropolitan Museum of Art Collection API
+// Random art object
+
+loading.style.display = "block";
+fetch(
+  `https://collectionapi.metmuseum.org/public/collection/v1/objects/${Math.floor(
+    Math.random() * 10000 + 1
+  )}`,
+  {
+    method: "GET",
+  }
+)
+  .then((res) => res.json())
+  .then((data) => {
+    let image = data.primaryImageSmall;
+    let name = data.objectName;
+    let date = data.objectDate;
+    let medium = data.medium;
+    let artistName = data.artistDisplayName;
+    let creditLine = data.creditLine;
+    let size = data.dimensions;
+
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Metropolitan Museum of Art Collection API</h4>
+                <h5 class="card-text mt-4">${name}</h5>
+                <p>${artistName} (${date})</p>
+                <p>${medium}, ${size}</p>
+                <img src="${image}" />
+                <p>${creditLine}<p>
+                <br>
+                <a href="https://github.com/gh0sttttt" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/gh0sttttt"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>gh0sttttt</a>
+                &nbsp;
+                <a href="https://metmuseum.github.io/"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>The Metropolitan Museum of Art Collection API</a>
+              </div>
+            </div>
+          </div>
+        `;
+    loading.style.display = "none";
+    responsesBody.innerHTML += response;
+  });
