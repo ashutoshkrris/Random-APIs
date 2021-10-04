@@ -1031,3 +1031,35 @@ fetch(
     loading.style.display = "none";
     responsesBody.innerHTML += response;
   });
+
+//Taylor swift api
+loading.style.display = "block";
+fetch("https://taylorswiftapi.herokuapp.com/get", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Random Taylor SWift Quotes and Lyrics</h4>
+                <h5 class="card-text mt-4">${data.quote}</h5>
+                <br />
+                <a href="https://github.com/shubhangi013" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/shubhangi013"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>shubhangi013</a>
+                &nbsp;
+                <a href="https://taylorswiftapi.herokuapp.com/"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>TAYLOR SWIFT API</a>
+              </div>
+            </div>
+          </div>
+        `;
+    loading.style.display = "none";
+    responsesBody.innerHTML += response;
+  });
