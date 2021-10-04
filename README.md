@@ -152,7 +152,7 @@ fetch("https://api.adviceslip.com/advice", {
     - Replace the **title** with the title of your API
     ![Change Title](https://i.imgur.com/k6AoOtO.png)
 
-    - Replace the **response text**
+    - Replace the **response text** Use the format `data.<key_value>` to access key-values in the APIs return output. These can be nested if necessary.
     ![Change Response](https://i.imgur.com/CwWzQBc.png)
 
     - Replace **Github Profile URL**, **Image Source** and **Github Username** with that yours
