@@ -152,7 +152,7 @@ fetch("https://api.adviceslip.com/advice", {
     - Replace the **title** with the title of your API
     ![Change Title](https://i.imgur.com/k6AoOtO.png)
 
-    - Replace the **response text**
+    - Replace the **response text**.
     ![Change Response](https://i.imgur.com/CwWzQBc.png)
 
     - Replace **Github Profile URL**, **Image Source** and **Github Username** with that yours
