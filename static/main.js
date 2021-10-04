@@ -1154,3 +1154,40 @@ fetch(
     loading.style.display = "none";
     responsesBody.innerHTML += response;
   });
+loading.style.display = "block";
+fetch(
+  `https://www.breakingbadapi.com/api/characters/${Math.floor(
+    Math.random() * 50
+  )}`,
+  {
+    method: "GET",
+  }
+)
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Breaking Bad</h4>
+                <h5 class="card-text mt-4">
+					        <img src=${data[0].img} alt="Breaking Bad" class="card-img-top"/>
+				        </h5>
+                <br />
+                <a href="https://github.com/varopxndx" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/42877919?v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>varopxndx</a>
+                &nbsp;
+                <a href="https://breakingbadapi.com/documentation"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>Breaking Bad API</a>
+              </div>
+            </div>
+          </div>
+        `;
+    loading.style.display = "none";
+    responsesBody.innerHTML += response;
+  });
