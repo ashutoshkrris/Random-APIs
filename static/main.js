@@ -1194,3 +1194,40 @@ fetch("https://taylorswiftapi.herokuapp.com/get", {
     loading.style.display = "none";
     responsesBody.innerHTML += response;
   });
+
+
+// Coin API to display bitcoin price
+loading.style.display = "block"; 
+fetch("https://api.coincap.io/v2/rates/bitcoin", {
+  method: "GET", 
+})
+ .then(res => res.json())
+ .then((data) => {
+   console.log(data)
+   let price = parseFloat(data.data.rateUsd).toFixed(2)
+   console.log("dataa", price)
+   let response = `
+   <div class="col-lg-12 mb-4">
+       <div class="card">
+         <div class="card-body">
+           <h4 class="card-title">Bitcoin Latest Price API</h4>
+           <h3 class="card-text mt-4">${data.data.symbol} &nbsp; ${data.data.currencySymbol}</h3>
+           <h5 class="card-text mt-4">USD ${price}</h5>
+           <br />
+           <a href="https://github.com/vishalkr058" class="username">
+             <img
+               src="https://avatars.githubusercontent.com/u/22008102?v=4"
+               alt="DP"
+               class="rounded-circle img-fluid mr-2"
+               width="40"
+               height="40"/>vishalkr058</a>
+           &nbsp;
+           <a href="https://docs.coinapi.io"
+             class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>CoinAPI</a>
+         </div>
+       </div>
+     </div>
+   `;
+    loading.style.display = "none";
+    responsesBody.innerHTML += response;
+ });
