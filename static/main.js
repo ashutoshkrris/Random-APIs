@@ -811,7 +811,7 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php", {
                 }" alt="random cocktail" class="card-img-top"/>
                 <h6 class="font-bold">Ingredients</h6>
                 <ul>
-                  ${filteredIngredients.join("")} 
+                  ${filteredIngredients.join("")}
                 </ul>
                 <h6 class="font-bold">Instructions</h6>
                 <p>${drinkObj.strInstructions}</p>
@@ -1187,6 +1187,40 @@ fetch("https://taylorswiftapi.herokuapp.com/get", {
                 &nbsp;
                 <a href="https://taylorswiftapi.herokuapp.com/"
                   class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>TAYLOR SWIFT API</a>
+              </div>
+            </div>
+          </div>
+        `;
+    loading.style.display = "none";
+    responsesBody.innerHTML += response;
+  });
+
+//lorem Picsum API
+loading.style.display = "block";
+fetch("https://picsum.photos/v2/list?page=1&limit=100", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let randIndex = Math.floor(Math.random()*100);
+
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Lorem Picsum API</h4>
+                <h5 class="card-text mt-4"><img src=${data[randIndex].download_url} class="card-img-top"></h5>
+                <br />
+                <a href="https://github.com/jkagawa" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/13341697"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>jkagawa</a>
+                &nbsp;
+                <a href="https://picsum.photos/"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i> Lorem Picsum API</a>
               </div>
             </div>
           </div>
