@@ -806,9 +806,8 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php", {
               <div class="card-body">
                 <h4 class="card-title">Random Cocktail Recipe</h4>
                 <h5 class="card-text mt-4">${drinkObj.strDrink}</h5>
-                <img src="${
-                  drinkObj.strDrinkThumb
-                }" alt="random cocktail" class="card-img-top"/>
+                <img src="${drinkObj.strDrinkThumb
+      }" alt="random cocktail" class="card-img-top"/>
                 <h6 class="font-bold">Ingredients</h6>
                 <ul>
                   ${filteredIngredients.join("")} 
@@ -1187,6 +1186,41 @@ fetch("https://taylorswiftapi.herokuapp.com/get", {
                 &nbsp;
                 <a href="https://taylorswiftapi.herokuapp.com/"
                   class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i>TAYLOR SWIFT API</a>
+              </div>
+            </div>
+          </div>
+        `;
+    loading.style.display = "none";
+    responsesBody.innerHTML += response;
+  });
+
+// Avata/Legend of Korra API
+loading.style.display = "block";
+fetch("https://last-airbender-api.herokuapp.com/api/v1/characters/random", {
+  method: "GET",
+})
+  .then((res) => res.json())
+  .then((data) => {
+    let response = `
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Avata/Legend of Korra API</h4>
+                <h5 class="card-text mt-4">
+                  <img class="card-img-top" src="${data[0].photoUrl}"/>
+                </h5>
+                <h5 class="card-text mt-4">${data[0].name}</h5>
+                <br />
+                <a href="https://github.com/paigeegorry" class="username">
+                  <img
+                    src="https://avatars.githubusercontent.com/u/10664311?v=4"
+                    alt="DP"
+                    class="rounded-circle img-fluid mr-2"
+                    width="40"
+                    height="40"/>paigeegorry</a>
+                &nbsp;
+                <a href="https://last-airbender-api.herokuapp.com/"
+                  class="btn btn-outline-dark btn-sm"><i class="fa fa-link mr-2" aria-hidden="true"></i> Avatar API</a>
               </div>
             </div>
           </div>
