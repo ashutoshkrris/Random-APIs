@@ -45,7 +45,7 @@ This repository is for anyone around the globe who wants to start their open-sou
 [![Learn more](https://img.shields.io/badge/-Learn%20more-orange?style=plastic)](https://hacktoberfest.digitalocean.com/resources/participation)
 
 
-## Prerequisite
+# Prerequisite
 
 ### Git & Github
 Here, we have mentioned the instructions to set up git. If you don't already know what Git is, check out this blog series on [iRead](https://iread.ga/series/1/git-and-github).
